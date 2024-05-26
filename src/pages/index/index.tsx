@@ -8,8 +8,8 @@ const Index = () => {
   const increment = useCounterStore((store) => store.increment);
   return (
     <View className="wrapper">
-      <Title className="bg-slate-300">Title with underline</Title>
-      <Title className="bg-slate-300 no-underline">
+      <Title className="bg-slate-300 text-lg">Title with underline</Title>
+      <Title className="bg-slate-300 no-underline text-[50px]">
         Title without underline
       </Title>
       <Button onClick={() => increment()}>{count}</Button>

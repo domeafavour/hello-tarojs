@@ -1,4 +1,5 @@
-const path = require("path");
+import path from "path";
+import { UnifiedWebpackPluginV5 } from "weapp-tailwindcss/webpack";
 
 const config = {
   projectName: "hello-tarojs",
@@ -41,6 +42,20 @@ const config = {
           generateScopedName: "[name]__[local]___[hash:base64:5]",
         },
       },
+    },
+    webpackChain(chain, webpack) {
+      chain.merge({
+        plugin: {
+          install: {
+            plugin: UnifiedWebpackPluginV5,
+            args: [
+              {
+                appType: "taro",
+              },
+            ],
+          },
+        },
+      });
     },
   },
   h5: {
