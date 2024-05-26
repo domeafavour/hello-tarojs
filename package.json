@@ -38,6 +38,7 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
+    "@tanstack/react-query": "^5.39.0",
     "@tarojs/components": "3.6.30",
     "@tarojs/helper": "3.6.30",
     "@tarojs/plugin-framework-react": "3.6.30",
